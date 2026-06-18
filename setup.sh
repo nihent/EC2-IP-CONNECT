@@ -11,11 +11,13 @@ RESET="\033[0m"
 
 # ASCII Banner
 echo -e "${CYAN}"
-echo "_   _      _ _"
-echo "| | | | ___| | | ___"
-echo "| |_| |/ _ \ | |/ _ \"
-echo "|  _  |  __/ | | (_) |"
-echo "|_| |_|\___|_|_|\___/"
+cat << 'EOF'
+ _   _      _ _
+| | | | ___| | | ___
+| |_| |/ _ \ | |/ _ \
+|  _  |  __/ | | (_) |
+|_| |_|\___|_|_|\___/
+EOF
 echo ""
 echo "        X HUB HOSTINGER EC2 Setup Tool"
 echo -e "${RESET}"
