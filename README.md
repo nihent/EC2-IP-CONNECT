@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 AWS EC2 SSH Connect Setup
+# 🚀 AWS EC2 SSH Connect With Public IP Setup
 
 **Interactive SSH Setup Script for AWS EC2 (Ubuntu & Debian)**
 
