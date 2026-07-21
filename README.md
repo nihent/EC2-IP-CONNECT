@@ -1,146 +1,168 @@
-🚀 AWS EC2 SSH Connect Setup
+<div align="center">
 
-A lightweight and interactive Bash script to quickly enable Root SSH Login and Password Authentication on AWS EC2 instances running Ubuntu or Debian.
+# 🚀 AWS EC2 SSH Connect Setup
 
-Designed for users who need fast SSH access without manually editing SSH configuration files.
+**Interactive SSH Setup Script for AWS EC2 (Ubuntu & Debian)**
+
+Enable **Root Login** and **Password Authentication** in seconds.
+
+![Platform](https://img.shields.io/badge/Platform-AWS%20EC2-orange?style=for-the-badge)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-18.04%20--%2025.10-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-10%20--%2013-A81D33?style=for-the-badge&logo=debian&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+
+</div>
 
 ---
 
-✨ Features
+# ✨ Features
 
-- ✅ Enable Root SSH Login
-- ✅ Enable Password Authentication
-- ✅ Set Root Password
-- ✅ Automatically Configure SSH
-- ✅ Restart SSH Service
+- 🔐 Enable Root Login
+- 🔑 Enable Password Authentication
+- 👤 Set Root Password
+- 🌐 Detect Public IP Automatically
+- 🔄 Restart SSH Service
 - ✅ Verify SSH Configuration
-- ✅ Detect & Display Public IP
-- ✅ Interactive Terminal Interface
-- ✅ One-Command Installation with "curl"
+- ⚡ One Command Installation
+- 🖥️ Interactive Menu
 
 ---
 
-📋 Requirements
+# ⚡ Quick Install
 
-- AWS EC2 Instance
-- Ubuntu or Debian
-- "sudo" privileges
-- Internet connection
-
----
-
-⚡ Quick Install
-
-Run the latest version directly from GitHub:
-
+```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/nihent/setups/main/setup.sh)
+```
 
 or
 
+```bash
 curl -fsSL https://raw.githubusercontent.com/nihent/setups/main/setup.sh | bash
+```
 
 ---
 
-📥 Manual Installation
+# 📥 Manual Installation
 
-Clone the repository:
-
+```bash
 git clone https://github.com/nihent/setups.git
 cd setups
-
-Make the script executable:
-
 chmod +x setup.sh
-
-Run the script:
-
 ./setup.sh
-
-or
-
-bash setup.sh
+```
 
 ---
 
-🛠️ What the Script Does
+# 📖 Usage
 
-The script automatically:
+Run the script.
 
-- Sets a password for the root user
-- Enables Root Login
-- Enables Password Authentication
-- Creates an SSH override configuration
-- Restarts the SSH service
-- Verifies the applied SSH configuration
-- Detects and displays the server's Public IP
+```bash
+./setup.sh
+```
+
+Choose:
+
+```
+1) Setup SSH
+2) Exit
+```
+
+Enter a password for the **root** user.
+
+Done! 🎉
 
 ---
 
-🔑 Login After Setup
+# 🛠️ What it Configures
 
-Use your EC2 Public IP:
+✔ Sets the Root Password
 
+✔ Enables Root Login
+
+✔ Enables Password Authentication
+
+✔ Creates SSH Override Config
+
+✔ Restarts SSH Service
+
+✔ Displays Public IP
+
+✔ Verifies Configuration
+
+---
+
+# 🔑 Login
+
+```text
 Host: YOUR_PUBLIC_IP
 Username: root
-Password: Your chosen password
+Password: Your Password
+```
 
-Example:
+Example
 
+```bash
 ssh root@YOUR_PUBLIC_IP
+```
 
 ---
 
-✅ Tested Platforms
+# ✅ Tested
 
-Ubuntu
-
-Version| Status
-Ubuntu 18.04 LTS| ✅
-Ubuntu 20.04 LTS| ✅
-Ubuntu 22.04 LTS| ✅
-Ubuntu 24.04 LTS| ✅
-Ubuntu 25.04| ✅
-Ubuntu 25.10| ✅
-
-Debian
-
-Version| Status
-Debian 10 (Buster)| ✅
-Debian 11 (Bullseye)| ✅
-Debian 12 (Bookworm)| ✅
-Debian 13 (Trixie)| ✅
+| OS | Status |
+|----|--------|
+| Ubuntu 18.04 LTS | ✅ |
+| Ubuntu 20.04 LTS | ✅ |
+| Ubuntu 22.04 LTS | ✅ |
+| Ubuntu 24.04 LTS | ✅ |
+| Ubuntu 25.04 | ✅ |
+| Ubuntu 25.10 | ✅ |
+| Debian 10 | ✅ |
+| Debian 11 | ✅ |
+| Debian 12 | ✅ |
+| Debian 13 | ✅ |
 
 ---
 
-📂 Repository Structure
+# 📂 Repository
 
+```
 .
 ├── setup.sh
 └── README.md
+```
 
 ---
 
-⚠️ Security Notice
+# ⚠️ Security
 
-This script enables root login using a password, which is intended for testing, development, or environments you control.
+This script enables **Root Login** and **Password Authentication**.
 
-For production servers, it is strongly recommended to:
+Recommended for:
 
-- Use SSH Key Authentication
+- Development
+- Testing
+- Private Servers
+
+For production:
+
+- SSH Keys
+- Disable Root Login
 - Disable Password Authentication
-- Disable Root Login after setup
-- Protect your server with a firewall
 
 ---
 
-📄 License
+# 📜 License
 
-This project is licensed under the MIT License.
+MIT License
 
 ---
 
-⭐ Support
+<div align="center">
 
-If this project helped you, consider giving the repository a ⭐ Star on GitHub.
+⭐ **If this project helped you, don't forget to Star the repository!**
 
-Contributions, issues, and pull requests are always welcome.
+Made with ❤️ by **Nihent**
+
+</div>
