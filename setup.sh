@@ -19,7 +19,7 @@ cat << 'EOF'
 |_| |_|\___|_|_|\___/
 EOF
 echo ""
-echo "        X HUB HOSTINGER EC2 Setup Tool"
+echo "AWS EC2 SSH CONNECT SETUP WITH PUBLIC IP"
 echo -e "${RESET}"
 
 sleep 1
