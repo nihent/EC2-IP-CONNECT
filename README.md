@@ -1,32 +1,37 @@
 🚀 AWS EC2 SSH Connect Setup
 
-«One-command SSH setup for AWS EC2.
-Enable Root Login and Password Authentication on Ubuntu & Debian in seconds.»
+A lightweight and interactive Bash script to quickly enable Root SSH Login and Password Authentication on AWS EC2 instances running Ubuntu or Debian.
 
-<p align="center">"Platform" (https://img.shields.io/badge/Platform-AWS%20EC2-orange?style=for-the-badge)
-"OS" (https://img.shields.io/badge/Ubuntu%20%26%20Debian-Supported-success?style=for-the-badge)
-"Shell" (https://img.shields.io/badge/Bash-Script-blue?style=for-the-badge)
-"License" (https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-
-</p>---
-
-✨ Features
-
-- 🔐 Enable Root SSH Login
-- 🔑 Enable Password Authentication
-- 👤 Set Root Password
-- ⚡ Automatic SSH Configuration
-- 🔄 Restart SSH Service
-- 🌐 Detect Public IP Automatically
-- 📋 Interactive Menu
-- 🚀 One-Command Installation
-- ✅ Lightweight & Fast
+Designed for users who need fast SSH access without manually editing SSH configuration files.
 
 ---
 
-🚀 Quick Install
+✨ Features
 
-Run directly without cloning:
+- ✅ Enable Root SSH Login
+- ✅ Enable Password Authentication
+- ✅ Set Root Password
+- ✅ Automatically Configure SSH
+- ✅ Restart SSH Service
+- ✅ Verify SSH Configuration
+- ✅ Detect & Display Public IP
+- ✅ Interactive Terminal Interface
+- ✅ One-Command Installation with "curl"
+
+---
+
+📋 Requirements
+
+- AWS EC2 Instance
+- Ubuntu or Debian
+- "sudo" privileges
+- Internet connection
+
+---
+
+⚡ Quick Install
+
+Run the latest version directly from GitHub:
 
 bash <(curl -fsSL https://raw.githubusercontent.com/nihent/setups/main/setup.sh)
 
@@ -47,7 +52,7 @@ Make the script executable:
 
 chmod +x setup.sh
 
-Run:
+Run the script:
 
 ./setup.sh
 
@@ -57,29 +62,27 @@ bash setup.sh
 
 ---
 
-⚙️ What This Script Does
+🛠️ What the Script Does
 
-✔ Sets a password for the root user.
+The script automatically:
 
-✔ Enables PermitRootLogin.
-
-✔ Enables PasswordAuthentication.
-
-✔ Restarts the SSH service.
-
-✔ Verifies the SSH configuration.
-
-✔ Automatically detects and displays your Public IP.
+- Sets a password for the root user
+- Enables Root Login
+- Enables Password Authentication
+- Creates an SSH override configuration
+- Restarts the SSH service
+- Verifies the applied SSH configuration
+- Detects and displays the server's Public IP
 
 ---
 
-🔑 Login
+🔑 Login After Setup
 
-After setup:
+Use your EC2 Public IP:
 
-Host : Your EC2 Public IP
-User : root
-Password : Your chosen password
+Host: YOUR_PUBLIC_IP
+Username: root
+Password: Your chosen password
 
 Example:
 
@@ -87,56 +90,57 @@ ssh root@YOUR_PUBLIC_IP
 
 ---
 
-✅ Tested & Working
+✅ Tested Platforms
 
 Ubuntu
 
-- ✅ Ubuntu 18.04 LTS
-- ✅ Ubuntu 20.04 LTS
-- ✅ Ubuntu 22.04 LTS
-- ✅ Ubuntu 24.04 LTS
-- ✅ Ubuntu 25.04
-- ✅ Ubuntu 25.10
+Version| Status
+Ubuntu 18.04 LTS| ✅
+Ubuntu 20.04 LTS| ✅
+Ubuntu 22.04 LTS| ✅
+Ubuntu 24.04 LTS| ✅
+Ubuntu 25.04| ✅
+Ubuntu 25.10| ✅
 
 Debian
 
-- ✅ Debian 10 (Buster)
-- ✅ Debian 11 (Bullseye)
-- ✅ Debian 12 (Bookworm)
-- ✅ Debian 13 (Trixie)
-
-Status: 🟢 Fully Tested & Working
+Version| Status
+Debian 10 (Buster)| ✅
+Debian 11 (Bullseye)| ✅
+Debian 12 (Bookworm)| ✅
+Debian 13 (Trixie)| ✅
 
 ---
 
-📋 Requirements
+📂 Repository Structure
 
-- AWS EC2 Instance
-- Ubuntu / Debian
-- sudo privileges
-- Internet Connection
+.
+├── setup.sh
+└── README.md
 
 ---
 
 ⚠️ Security Notice
 
-This script enables Root Login and Password Authentication.
+This script enables root login using a password, which is intended for testing, development, or environments you control.
 
-It is recommended for development, testing, or private servers. If you expose your server to the public internet, always use:
+For production servers, it is strongly recommended to:
 
-- Strong passwords
-- Firewall rules
-- SSH Keys (recommended)
-- Fail2Ban or similar protection
+- Use SSH Key Authentication
+- Disable Password Authentication
+- Disable Root Login after setup
+- Protect your server with a firewall
 
 ---
 
 📄 License
 
-Licensed under the MIT License.
+This project is licensed under the MIT License.
 
 ---
 
-<p align="center">
-Made with ❤️ by <b>Nihent</b>
-</p>
+⭐ Support
+
+If this project helped you, consider giving the repository a ⭐ Star on GitHub.
+
+Contributions, issues, and pull requests are always welcome.
