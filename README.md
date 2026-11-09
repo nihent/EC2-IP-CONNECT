@@ -1,48 +1,55 @@
-<div align="center">
+ <div align="center">
 
-# 🚀 AWS EC2 SSH Connect With Public IP Setup
+# AWS EC2 SSH Setup
 
-**Interactive SSH Setup Script for AWS EC2 (Ubuntu & Debian)**
+**A simple interactive SSH configuration script for AWS EC2 instances.**
 
-Enable **Root Login** and **Password Authentication** in seconds.
+Configure SSH access on Ubuntu and Debian with a single command.
 
-![Platform](https://img.shields.io/badge/Platform-AWS%20EC2-orange?style=for-the-badge)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-18.04%20--%2025.10-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![Debian](https://img.shields.io/badge/Debian-10%20--%2013-A81D33?style=for-the-badge&logo=debian&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
+![AWS EC2](https://img.shields.io/badge/AWS-EC2-orange?style=flat-square&logo=amazonaws)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-18.04--25.10-E95420?style=flat-square&logo=ubuntu&logoColor=white)
+![Debian](https://img.shields.io/badge/Debian-10--13-A81D33?style=flat-square&logo=debian&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
 </div>
 
 ---
 
-# ✨ Features
+## Overview
 
-- 🔐 Enable Root Login
-- 🔑 Enable Password Authentication
-- 👤 Set Root Password
-- 🌐 Detect Public IP Automatically
-- 🔄 Restart SSH Service
-- ✅ Verify SSH Configuration
-- ⚡ One Command Installation
-- 🖥️ Interactive Menu
+An interactive Bash script that simplifies SSH configuration on AWS EC2 instances.
 
----
+It provides options to configure root access, password authentication, and SSH settings without manually editing configuration files.
 
-# ⚡ Quick Install
+## Features
+
+- Enable root login
+- Enable password authentication
+- Set the root password
+- Automatically detect the public IP address
+- Configure SSH override settings
+- Restart the SSH service
+- Verify SSH configuration
+- Interactive terminal menu
+- One-command installation
+
+## Quick Installation
+
+Run the following command on your EC2 instance:
 
 ```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/nihent/setups/main/setup.sh)
 ```
 
-or
+Alternatively:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/nihent/setups/main/setup.sh | bash
 ```
 
----
+## Manual Installation
 
-# 📥 Manual Installation
+Clone the repository and execute the setup script:
 
 ```bash
 git clone https://github.com/nihent/setups.git
@@ -51,118 +58,101 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
----
+## Usage
 
-# 📖 Usage
-
-Run the script.
+Start the script:
 
 ```bash
 ./setup.sh
 ```
 
-Choose:
-
-```
-1) Setup SSH
-2) Exit
-```
-
-Enter a password for the **root** user.
-
-Done! 🎉
-
----
-
-# 🛠️ What it Configures
-
-✔ Sets the Root Password
-
-✔ Enables Root Login
-
-✔ Enables Password Authentication
-
-✔ Creates SSH Override Config
-
-✔ Restarts SSH Service
-
-✔ Displays Public IP
-
-✔ Verifies Configuration
-
----
-
-# 🔑 Login
+Select an option from the interactive menu:
 
 ```text
-Host: YOUR_PUBLIC_IP
-Username: root
-Password: Your Password
+  1) Setup SSH
+  2) Exit
 ```
 
-Example
+Choose **Setup SSH**, then enter your desired root password when prompted.
+
+The script applies the configuration and verifies the SSH settings.
+
+## Configuration
+
+The script handles the following operations:
+
+| Configuration | Action |
+|---|---|
+| Root Password | Sets a new password |
+| Root Login | Enables root SSH access |
+| Password Authentication | Enables password-based SSH |
+| SSH Configuration | Creates an override configuration |
+| SSH Service | Restarts the SSH service |
+| Public IP | Automatically detects the public IP |
+| Verification | Checks applied SSH settings |
+
+## Connecting to Your Server
+
+After successful configuration, connect using:
 
 ```bash
 ssh root@YOUR_PUBLIC_IP
 ```
 
----
+Connection details:
 
-# ✅ Tested
-
-| OS | Status |
-|----|--------|
-| Ubuntu 18.04 LTS | ✅ |
-| Ubuntu 20.04 LTS | ✅ |
-| Ubuntu 22.04 LTS | ✅ |
-| Ubuntu 24.04 LTS | ✅ |
-| Ubuntu 25.04 | ✅ |
-| Ubuntu 25.10 | ✅ |
-| Debian 10 | ✅ |
-| Debian 11 | ✅ |
-| Debian 12 | ✅ |
-| Debian 13 | ✅ |
-
----
-
-# 📂 Repository
-
+```text
+Host:     YOUR_PUBLIC_IP
+Username: root
+Password: YOUR_ROOT_PASSWORD
 ```
-.
+
+Replace `YOUR_PUBLIC_IP` with your EC2 instance's public IPv4 address.
+
+**Note:** Your EC2 security group must allow inbound SSH traffic on port 22. Also ensure your network permits the connection.
+
+## Supported Operating Systems
+
+| Operating System | Versions |
+|---|---|
+| Ubuntu | 18.04 – 25.10 |
+| Debian | 10 – 13 |
+
+## Repository Structure
+
+```text
+setups/
 ├── setup.sh
 └── README.md
 ```
 
----
+## Security Considerations
 
-# ⚠️ Security
+This script enables root login and password-based SSH authentication.
 
-This script enables **Root Login** and **Password Authentication**.
+These settings increase exposure to unauthorized access, particularly on publicly accessible servers.
 
-Recommended for:
+For production environments, prefer:
 
-- Development
-- Testing
-- Private Servers
+- SSH key-based authentication
+- Disabling direct root login
+- Disabling password authentication
+- Restricting SSH access through security groups
 
-For production:
+Never expose your root password or share it publicly.
 
-- SSH Keys
-- Disable Root Login
-- Disable Password Authentication
+## License
 
----
-
-# 📜 License
-
-MIT License
+This project is licensed under the [MIT License](https://github.com/nihent/setups/blob/main/LICENSE).
 
 ---
 
 <div align="center">
 
-⭐ **If this project helped you, don't forget to Star the repository!**
+**If you find this project useful, consider giving it a star.**
 
-Made with ❤️ by **Nihent**
+Made by **Nihent**
+
+[GitHub](https://github.com/nihent) · [Repository](https://github.com/nihent/setups)
 
 </div>
