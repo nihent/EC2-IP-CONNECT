@@ -149,9 +149,6 @@ This project is licensed under the [MIT License](https://github.com/nihent/setup
 
 <div align="center">
 
-**If you find this project useful, consider giving it a star.**
-
-Made by **Nihent**
 
 [GitHub](https://github.com/nihent) · [Repository](https://github.com/nihent/setups)
 
